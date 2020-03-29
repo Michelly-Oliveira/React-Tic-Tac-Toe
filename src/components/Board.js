@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BoardPiece from './BoardPiece';
+import PropTypes from 'prop-types';
 
 export class Board extends Component {
     render() {
@@ -9,5 +10,9 @@ export class Board extends Component {
         return pieces.map(piece => <BoardPiece  key={piece.key} piece={piece} addContent={this.props.addContent} />);
     }
 }
+
+Board.propTypes = {
+    addContent: PropTypes.func.isRequired
+}; 
 
 export default Board;

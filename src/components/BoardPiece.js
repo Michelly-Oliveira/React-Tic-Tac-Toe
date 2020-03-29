@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class BoardPiece extends Component {
     render() {
@@ -21,5 +22,9 @@ const pieceStyle = {
     fontSize: '1.5rem',
     lineHeight: '46px',
 };
+
+BoardPiece.propTypes = {
+    addContent: PropTypes.func.isRequired
+}; 
 
 export default BoardPiece;

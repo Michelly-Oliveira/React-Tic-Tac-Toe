@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class RestartBtn extends Component {
     getStyle = () => {
@@ -23,5 +24,9 @@ export class RestartBtn extends Component {
         )
     }
 }
+
+RestartBtn.propTypes = {
+    restartGame: PropTypes.func.isRequired
+}; 
 
 export default RestartBtn;
